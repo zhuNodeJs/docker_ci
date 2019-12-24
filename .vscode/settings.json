@@ -15,12 +15,12 @@
         }],
         "targets": [{
             "type": "sftp",
-            "name": "AliyunServer",
+            "name": "xiaozhu",
             "dir": "/root/source/docker_ci",
-            "host": "47.98.252.43",
+            "host": "139.224.19.46",
             "port": 22,
             "user": "root",
-            "privateKey": "/Users/xia/.ssh/id_rsa"
+            "password": "820850hfZSL"
         }],
     },
 }
