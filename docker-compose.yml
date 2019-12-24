@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+        nginx:
+                restart: always
+                image: nginx
+                ports:
+                        - 8000:80
+                volumes:
+                        - ./nginx/conf.d/:/etc/nginx/conf.d
+                        - ./frontend/dist:/var/www/html/
+                        - ./static/:/static/
+        app-pm2:
+                container_name: app-pm2
+                build: ./backend
+                ports:
+                        - 3000:3000
+        mongo:
+                image: mongo
+                restart: always
+                ports:
+                        - 27017:27917
